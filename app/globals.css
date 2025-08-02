@@ -1,0 +1,208 @@
+body {
+  font-family: sans-serif;
+  margin: 2em;
+  background: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.playlist-label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.playlist-save-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.playlist-input {
+  flex-grow: 1;
+  padding: 8px;
+  font-size: 1rem;
+}
+
+.save-playlist-button {
+  cursor: pointer;
+  padding: 8px 16px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #0070f3;
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+.save-playlist-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.save-playlist-button:hover:enabled {
+  background-color: #005bb5;
+}
+
+.load-playlist-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.load-playlist-container select {
+  flex-grow: 1;
+  padding: 8px;
+  font-size: 1rem;
+}
+
+.delete-playlist-button {
+  cursor: pointer;
+  padding: 8px 16px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #e74c3c;
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+.delete-playlist-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.delete-playlist-button:hover:enabled {
+  background-color: #c0392b;
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.controls button,
+.generate-controls button {
+  margin-right: 10px;
+  cursor: pointer;
+  padding: 6px 14px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #0070f3;
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+.controls button:hover,
+.generate-controls button:hover {
+  background-color: #005bb5;
+}
+
+.song-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1em 0;
+}
+
+.song-item {
+  background: #e0e0e0;
+  padding: 6px 10px;
+  margin: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+.song-item:hover {
+  background-color: #ccc;
+}
+
+.generate-controls {
+  margin: 1em 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.generate-controls label {
+  font-weight: 600;
+}
+
+.generate-controls input[type='number'] {
+  width: 50px;
+  padding: 5px;
+  font-size: 1rem;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.bingo-card {
+  width: 500px;
+  height: 500px;
+  border: 2px solid #333;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.playlist-title {
+  margin: 0;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+hr {
+  margin: 6px 0 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+}
+
+.grid {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 2px;
+  user-select: none;
+}
+
+.cell {
+  background: #fff;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  padding: 6px;
+  text-align: center;
+  word-wrap: break-word;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.cell.free {
+  background-color: #ffdf91;
+  font-weight: bold;
+  cursor: default;
+}
+
+.cell.clicked {
+  background-color: #c6f6d5;
+}
